@@ -1,0 +1,131 @@
+:root {
+    --darkblue: #21806a;
+    --gradient: linear-gradient(45deg, #96e2f3 10%, #cba1e0bf 40%, #5fe8afb8 80%);
+}
+
+.top-bar {
+    background-color: #86bff1ab;
+    background-image: var(--gradient);
+}
+
+.menu {
+    background-image: linear-gradient(45deg, #80d1c8 0%, #68dfbd 40%, #69e1bd 80%);
+    border-radius: 10px;
+}
+
+.menu li {
+    border-radius: 10px;
+}
+
+.menu li a {
+    color: var(--darkblue); 
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 1.55vw;
+    transition: all .5s ease-out;
+}
+
+.menu li a:hover {
+    background: #cba1e0bf;
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+body {
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    line-height: 1.8;
+    color: var(--darkblue);
+    background-color: #86bff1ab;
+    background-image: var(--gradient);
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+}
+
+.hero {
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+}
+
+.hero-form {
+    border: 3px solid rgba(141, 98, 221, 0.8);
+    background-color: #86bff1ab;
+    background-image: var(--gradient);
+    padding: 20px;
+    color: var(--secondary-color);
+    width: 90%;
+    margin: 3.5%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+label {
+    font-size: 19px;
+    font-family: 'Courgette', cursive;
+    color: var(--darkblue);
+}
+
+.button {
+    background-color: #ef95f3;
+    background-image: linear-gradient(45deg, #ef95f3 0%, #4bcff3 52%, #87f1b6cf 90%);
+    transition: all .5s ease-out;
+    background-size: 1px 100px;
+    background-position: 0 -10px;
+    border-radius: 10px;
+    color: var(--darkblue);
+}
+
+.button:hover {
+    background-position: 1px -50px;
+    color: var(--darkblue);
+}
+
+.button:focus {
+    outline: none;
+}
+
+section{
+    padding: 60px;
+}
+
+.section-title {
+    font-size: 48px;
+    border-bottom: 3px solid var(--darkblue);
+    color: var(--darkblue);
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+}
+
+.information {
+    width: 100%;
+}
+
+.information input, .information textarea {
+    border: 1px solid var(--darkblue);
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: var(--darkblue);
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.75);
+}
+
+.information p, .information address, .information address a {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 19px;
+    font-style: normal;
+    color: var(--darkblue);
+    font-family: 'Courgette', cursive;
+}
+
+.map {
+   padding: 5vw; 
+}

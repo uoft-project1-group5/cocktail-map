@@ -3,51 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/styles.css" />
     <title>Login</title>
 </head>
 <body>
    <!--header/navigation bar-->
-   <header>
-    <h1>Online Barkeep</h1>
-    <nav>
-        <ul>
-            <li>
-                <a href="./index.html#about-us">About us</a>
-            </li>
-            <li>
-                <a href="./index.html#contact-us">Contact us</a>
-            </li>
-            <li>
-                <a href="./index.html#Sign-up">Sign up</a>
-            </li>
-            <li>
-                <a href="">Student Portal</a>
-            </li>
-        </ul>
-    </nav>
-    </header> 
+    <header>
+        <div class="top-bar">
+            <h1 class="top-bar-left">Online Barkeep</h1>
+                <nav class="top-bar-right">
+                   <ul class="menu">
+                   <li>
+                     <a href="./index.html#about-us">About us</a>
+                   </li>
+                   <li>
+                      <a href="./index.html#contact-us">Contact us</a>
+                   </li>
+                   <li>
+                      <a href="./index.html#Sign-up">Sign up</a>
+                   </li>
+                   <li>
+                      <a href="">Student Portal</a>
+                   </li>
+                </ul>
+            </nav>
+        </div>    
+    </header>
+
 
     <!--insert search script here-->
-    <h1>Search for a drink</h1>
-    Drink: <input type="text" id="searchTerm" value="drink" />
-    <button onclick="myFunction()">Search!</button>
-    <div id="response-container"></div>
-    <script src="assets/js/script.js"></script>
+    <section class="grid-y grid-x">
+        <h3 class="cell">Search for a drink</h3>
+        <form class="cell small-3">
+            <input type="text" id="searchTerm" placeholder="enter a Cocktail" />
+            <button type="search" class="button"><i class='fa fa-search'></i></button> 
+        </form>
+        <button type="search" class="button large cell small-3">Random Cocktail</button>
 
-    <!--insert random script here-->
-    <h1>Random Cocktail</h1>
-    <button onclick="myFunction()">Randomize!</button>
-    <div id="response-container"></div>
-    <script src="assets/js/script.js"></script>
+        <button type="clear" class="button large small-3">Clear History</button>
+
+        <div class="cell small-3">
+            <!-- history list in here -->
+        </div>
+    </section>
+
+    <section>
+        <!-- search results -->
+    </section>
+    
 
     <!--footer-->
-    <footer>
-        <div class="">
-            <h2>Mix and Drink Responsibly❤️</h2> 
-        </div>
-        <div>
+    <footer class="grid-x grid-padding-x">
+        <h3 class="cell small-9">Mix and Drink Responsibly❤️</h3> 
+        <div class="grid-x grid-padding-x align-middle">
             &copy; 2021 Online Barkeep, Inc.
         </div>
     </footer>
+
+    <script></script>
 </body>
 </html>
