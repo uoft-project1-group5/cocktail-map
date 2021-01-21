@@ -20,10 +20,13 @@
                      <a href="./index.html#about-us">About us</a>
                    </li>
                    <li>
-                      <a href="./index.html#contact-us">Contact us</a>
+                      <a href="./index.html#Sign-up">Sign up</a>
                    </li>
                    <li>
-                      <a href="./index.html#Sign-up">Sign up</a>
+                      <a href="./index.html#subscription">Subscription</a>
+                   </li>
+                   <li>
+                      <a href="./index.html#contact-us">Contact us</a>
                    </li>
                    <li>
                       <a href="">Student Portal</a>
@@ -35,26 +38,34 @@
 
 
     <!--insert search script here-->
-    <section class="grid-x grid-padding-x align-center-middle text-center">
-        <div class="cell small-12">
-            <h3>Search for a drink</h3>
+    <main class="grid-x grid-padding-x">
+        
+        <div class="cell small-2 history">
+            <button type="clear" class="button large">Clear History</button>
+            <div class="cell">
+                <!-- search history -->
+            </div>
         </div>
-        <div class="grid-x grid-padding-x align-center-middle">
-            <form class="cell small-12 ">
-                <input type="text" id="searchTerm" placeholder="enter a Cocktail" />
-                <button type="search" class="button"><i class='fa fa-search'></i></button> 
-            </form>
-            <button type="search" class="button large cell small-12">Random Cocktail</button>
-        </div>
-    </section>
 
-    <section class="grid-x grid-padding-x">
-        <button type="clear" class="button large">Clear History</button>
-        <div class="cell small-3">
-            <!-- search history -->
+        <div class="cell small-10 grid-x container">
+            <div class="cell">
+                <h3>Search for a drink</h3>
+            </div>
+            <div class="cell grid-x grid-padding-x searchBar">
+                <input type="text" class="cell small-5" id="searchTerm" placeholder="enter a Cocktail" />
+                <div class="cell small-5 grid-x grid-padding-x searchBtn">
+                    <button type="search" class="button large cell small-5"><i class='fa fa-search'></i></button> 
+                    <button type="search" class="button large cell small-5">Random Cocktail</button>
+                </div>
+            </div>
+
+            <div class="cell small-12 searchedCocktail">
+                <!-- searched cocktail information -->
+            </div>
         </div>
-    </section>
-    
+
+    </main>
+
 
     <!--footer-->
     <footer class="grid-x grid-padding-x">

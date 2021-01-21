@@ -1,7 +1,7 @@
 :root {
     --primary: #b4e4db;
     --secondary: #86bff1ab;
-    --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 68%, #791a12 84%);
+    --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 57%, #791a12 84%);
 }
 
 .top-bar {
@@ -47,7 +47,7 @@ h1, h2, h3 {
 
 .hero {
     background-image: url("../images/cocktail.gif");
-    background-size: 115%;
+    background-size: cover;
     background-position: center;
     
 }
@@ -82,14 +82,13 @@ label {
 
 .button:hover {
     background-position: 1px -50px;
-    color: var(--primary);
 }
 
 .button:focus {
     outline: none;
 }
 
-section{
+section {
     padding: 60px;
 }
 
@@ -133,3 +132,29 @@ section{
    padding: 5vw; 
 }
 
+.subscription {
+    font-size: 26px;
+    font-family: 'Courgette', cursive;
+    color: var(--primary);
+}
+
+.searchedCocktail {
+    height: 40vw;
+}
+
+.history {
+    margin-top: 35px;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+
+.searchBar, .searchBtn {
+    gap: 14px;
+}
+
+.searchBtn button {
+    padding: 0px;
+}
