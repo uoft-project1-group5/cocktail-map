@@ -1,15 +1,16 @@
 :root {
-    --darkblue: #21806a;
-    --gradient: linear-gradient(45deg, #96e2f3 10%, #cba1e0bf 40%, #5fe8afb8 80%);
+    --primary: #b4e4db;
+    --secondary: #86bff1ab;
+    --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 68%, #791a12 84%);
 }
 
 .top-bar {
-    background-color: #86bff1ab;
+    background-color: var(--secondary);
     background-image: var(--gradient);
 }
 
 .menu {
-    background-image: linear-gradient(45deg, #80d1c8 0%, #68dfbd 40%, #69e1bd 80%);
+    background-image: linear-gradient(6deg, #300a08 0%, #280706 40%, #791a12 80%);
     border-radius: 10px;
 }
 
@@ -18,7 +19,7 @@
 }
 
 .menu li a {
-    color: var(--darkblue); 
+    color: var(--primary); 
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 1.55vw;
@@ -26,7 +27,7 @@
 }
 
 .menu li a:hover {
-    background: #cba1e0bf;
+    background: #523c44;
     border-radius: 15px;
     text-shadow: none;
 }
@@ -35,8 +36,8 @@ body {
     font-family: 'Lobster', cursive;
     font-size: 26px;
     line-height: 1.8;
-    color: var(--darkblue);
-    background-color: #86bff1ab;
+    color: var(--primary);
+    background-color: var(--secondary);
     background-image: var(--gradient);
 }
 
@@ -46,42 +47,42 @@ h1, h2, h3 {
 
 .hero {
     background-image: url("../images/cocktail.gif");
-    background-size: cover;
+    background-size: 115%;
     background-position: center;
     
 }
 
 .hero-form {
-    border: 3px solid rgba(141, 98, 221, 0.8);
-    background-color: #86bff1ab;
+    border: 3px solid rgba(78, 13, 9, 0.8);
+    background-color: var(--secondary);
     background-image: var(--gradient);
     padding: 20px;
     color: var(--secondary-color);
     width: 90%;
     margin: 3.5%;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(28,5,5,0.5);
 }
 
 label {
     font-size: 19px;
     font-family: 'Courgette', cursive;
-    color: var(--darkblue);
+    color: var(--primary);
 }
 
 .button {
-    background-color: #ef95f3;
-    background-image: linear-gradient(45deg, #ef95f3 0%, #4bcff3 52%, #87f1b6cf 90%);
+    background-color: #791a12;
+    background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
     transition: all .5s ease-out;
     background-size: 1px 100px;
     background-position: 0 -10px;
     border-radius: 10px;
-    color: var(--darkblue);
+    color: var(--primary);
 }
 
 .button:hover {
     background-position: 1px -50px;
-    color: var(--darkblue);
+    color: var(--primary);
 }
 
 .button:focus {
@@ -94,8 +95,8 @@ section{
 
 .section-title {
     font-size: 48px;
-    border-bottom: 3px solid var(--darkblue);
-    color: var(--darkblue);
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
     padding-bottom: 20px;
     text-align: center;
     margin: 0 auto 35px auto;
@@ -107,11 +108,11 @@ section{
 }
 
 .information input, .information textarea {
-    border: 1px solid var(--darkblue);
+    border: 1px solid var(--primary);
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: var(--darkblue);
+    color: var(--primary);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -124,7 +125,7 @@ section{
     line-height: 1.5;
     font-size: 19px;
     font-style: normal;
-    color: var(--darkblue);
+    color: var(--primary);
     font-family: 'Courgette', cursive;
 }
 
