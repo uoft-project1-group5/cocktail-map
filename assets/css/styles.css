@@ -45,8 +45,10 @@ h1, h2, h3 {
 }
 
 .hero {
-    background-image: url("../images/hero.jpg");
+    background-image: url("../images/cocktail.gif");
     background-size: cover;
+    background-position: center;
+    
 }
 
 .hero-form {
