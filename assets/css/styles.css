@@ -33,12 +33,19 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Lobster', cursive;
     font-size: 26px;
     line-height: 1.8;
+    height: 100vh;
     color: var(--primary);
     background-color: var(--secondary);
     background-image: var(--gradient);
+}
+
+footer {
+    margin-top: auto;
 }
 
 h1, h2, h3 {
@@ -136,10 +143,6 @@ section {
     font-size: 26px;
     font-family: 'Courgette', cursive;
     color: var(--primary);
-}
-
-.searchedCocktail {
-    height: 40vw;
 }
 
 .history {
