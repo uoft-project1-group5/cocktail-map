@@ -94,11 +94,13 @@ var displayCocktail = async function(CocktailData) {
 
 // call api to get the cocktail details
 var getCocktail = function(event) {
-   
+    var checkRandom = false;
     //get the cocktail name from the search form
     if ($(this)[0].id=="search-button" || $(this)[0].id=="random"){
+        if ($(this)[0].id=="random"){checkRandom = true;};
     event.preventDefault();
     var cocktail = document.getElementById("searchTerm").value;
+    
     document.getElementById("searchTerm").value="";
     
         oldCocktailEl = document.getElementById("cocktail-info-ul");
@@ -112,10 +114,9 @@ var getCocktail = function(event) {
 
     }
     else {var cocktail = event.target.textContent};
-    
   
     // check if there is a string in the city name field
-    if ( !$(this)[0].id=="random" && cocktail.length === 0) {
+    if ( (checkRandom == false) && cocktail.length == 0) {
       alert("Please enter a Cocktail name.");  ///////////////////////////// to be replaced by modal
       return;
     };
@@ -134,7 +135,8 @@ var getCocktail = function(event) {
                 if (cocktail) {saveCocktail(cocktail);}
                 else {saveCocktail(data.drinks[0].strDrink)};
                 displayCocktail(data);
-              };
+              }
+              else {alert("Sorry, we don't have this drink!")};  ///////////////////////////// to be replaced by modal};
           });
         } else {
           alert("Error: " + response.statusText);  ///////////////////////////// to be replaced by modal
