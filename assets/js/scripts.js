@@ -6,7 +6,8 @@ var randomEl= document.getElementById("random");
 
 // clear history
 var clearHistory = function() {
-    localStorage.clear();
+    cocktailsList=[] ;
+    localStorage.setItem("cocktailsList", JSON.stringify(cocktailsList));
     loadCocktails();
     oldCocktailEl = document.getElementById("cocktail-info-ul");
     if (oldCocktailEl){
