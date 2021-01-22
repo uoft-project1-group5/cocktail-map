@@ -1,5 +1,22 @@
 var cocktailSearchEl= document.getElementById("search-button");
-var cocktailIngListEl= document.getElementById("cocktail-info-ul");
+var oldCocktailEl= document.getElementById("search-history");
+var clearHirstoryEl= document.getElementById("clear-history");
+var randomEl= document.getElementById("random");
+
+
+// clear history
+var clearHistory = function() {
+    localStorage.clear();
+    loadCocktails();
+    oldCocktailEl = document.getElementById("cocktail-info-ul");
+    if (oldCocktailEl){
+        oldCocktailEl.remove();
+        var oldCocktailEl = document.createElement("ul");
+        oldCocktailEl.id = "cocktail-info-ul";
+        oldCocktailDivEl =document.getElementById("cocktail-info");
+        oldCocktailDivEl.append(oldCocktailEl);
+    };
+};
 
 // Display old search
 var loadCocktails = function() {
@@ -11,7 +28,7 @@ var loadCocktails = function() {
     oldSearchDivEl =document.getElementById("search-history");
     oldSearchDivEl.append(oldSearchEl);};
   
-    citiesList = JSON.parse(localStorage.getItem("cocktailsList"));
+    cocktailsList = JSON.parse(localStorage.getItem("cocktailsList"));
     if (cocktailsList){
       for (var i = 0; i < cocktailsList.length; i++)  { 
         var cocktailEl = document.createElement("li");
@@ -29,10 +46,11 @@ var saveCocktail = function(cocktail){
     if (cocktailsList){
       var cocktailObject ={text:cocktail};
       
-      if (!cocktailsList.some(cocktailob => cocktailob.text === cocktail))
+      if (!cocktailsList.some(cocktailob => cocktailob.text == cocktail))
         {cocktailsList.push(cocktailObject);};
     }
-    else {cocktailsList=[{text:cocktail}]};
+    else {if (!cocktail =="") {cocktailsList=[{text:cocktail}]};
+        };
   
     localStorage.setItem("cocktailsList", JSON.stringify(cocktailsList));
   
@@ -41,13 +59,24 @@ var saveCocktail = function(cocktail){
 
 // display the cocktail details
 var displayCocktail = async function(CocktailData) {
-    console.log(CocktailData.drinks);
+    
     // check if api returned any data
     if (CocktailData.drinks.length === 0) {
       alert("No data found.");   ///////////////////////////// to be replaced by modal
       return;
     };
     
+    oldCocktailEl = document.getElementById("cocktail-info-ul");
+    if (oldCocktailEl){
+    oldCocktailEl.remove();
+    var oldCocktailEl = document.createElement("ul");
+    oldCocktailEl.id = "cocktail-info-ul";
+    oldCocktailDivEl =document.getElementById("cocktail-info");
+    oldCocktailDivEl.append(oldCocktailEl);
+    };
+    
+    var cocktailIngListEl= document.getElementById("cocktail-info-ul");
+
     // loop over data
     for (var i = 0; i < CocktailData.drinks.length; i++) {
         var cocktailIngEl = document.createElement("li");
@@ -66,21 +95,33 @@ var displayCocktail = async function(CocktailData) {
 var getCocktail = function(event) {
    
     //get the cocktail name from the search form
-    if ($(this)[0].id=="search-button"){
+    if ($(this)[0].id=="search-button" || $(this)[0].id=="random"){
     event.preventDefault();
     var cocktail = document.getElementById("searchTerm").value;
-    document.getElementById("searchTerm").value="";}
+    document.getElementById("searchTerm").value="";
+    
+        oldCocktailEl = document.getElementById("cocktail-info-ul");
+        if (oldCocktailEl){
+            oldCocktailEl.remove();
+            var oldCocktailEl = document.createElement("ul");
+            oldCocktailEl.id = "cocktail-info-ul";
+            oldCocktailDivEl =document.getElementById("cocktail-info");
+            oldCocktailDivEl.append(oldCocktailEl);
+        };
+
+    }
     else {var cocktail = event.target.textContent};
     
   
     // check if there is a string in the city name field
-    if (cocktail.length === 0) {
+    if ( !$(this)[0].id=="random" && cocktail.length === 0) {
       alert("Please enter a Cocktail name.");  ///////////////////////////// to be replaced by modal
       return;
     };
-  
+    
     // format the github api url
-    var apiUrl ="https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+cocktail ;
+    if ($(this)[0].id=="random"){var apiUrl ="https://www.thecocktaildb.com/api/json/v1/1/random.php";}
+    else {var apiUrl ="https://www.thecocktaildb.com/api/json/v1/1/search.php?s="+cocktail };
   
     // make a request to the url
     fetch(apiUrl)
@@ -88,8 +129,11 @@ var getCocktail = function(event) {
         // request was successful
         if (response.ok) {
           response.json().then(function(data) {
-            saveCocktail(cocktail);
-            displayCocktail(data);
+              if (data.drinks) {
+                if (cocktail) {saveCocktail(cocktail);}
+                else {saveCocktail(data.drinks[0].strDrink)};
+                displayCocktail(data);
+              };
           });
         } else {
           alert("Error: " + response.statusText);  ///////////////////////////// to be replaced by modal
@@ -100,6 +144,18 @@ var getCocktail = function(event) {
         alert("Unable to connect" + error);  ///////////////////////////// to be replaced by modal
       });
   };
-  
+
+// load old cocktails
+loadCocktails();
+
 // click the search button
 cocktailSearchEl.addEventListener("click", getCocktail);
+
+// click the clear history button
+clearHirstoryEl.addEventListener("click", clearHistory);
+
+// click the random button
+randomEl.addEventListener("click", getCocktail);
+
+// click on one of the old cocktails
+oldCocktailEl.addEventListener("click", getCocktail);

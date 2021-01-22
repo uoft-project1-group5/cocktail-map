@@ -41,7 +41,7 @@
     <main class="grid-x grid-padding-x">
         
         <div class="cell small-2 history">
-            <button type="clear" class="button large">Clear History</button>
+            <button type="clear" class="button large" id="clear-history">Clear History</button>
             <div class="cell" id="search-history">
                 <!-- search history -->
                 <ul  id="search-history-ul">
@@ -57,11 +57,11 @@
                 <input type="text" class="cell small-5" id="searchTerm" placeholder="enter a Cocktail" />
                 <div class="cell small-5 grid-x grid-padding-x searchBtn">
                     <button type="search" class="button large cell small-5" id= "search-button"><i class='fa fa-search'></i></button> 
-                    <button type="search" class="button large cell small-5">Random Cocktail</button>
+                    <button type="search" class="button large cell small-5" id= "random">Random Cocktail</button>
                 </div>
             </div>
 
-            <div class="cell small-12 searchedCocktail">
+            <div class="cell small-12 searchedCocktail" id="cocktail-info">
                 <!-- searched cocktail information -->
                 <ul  id="cocktail-info-ul">
                 </ul>
