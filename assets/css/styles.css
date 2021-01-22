@@ -272,6 +272,10 @@ section {
     .hero-form, label {
         font-size: 19px;
     }
+
+   .list {
+    display: flex;
+   }
 }
 
 /* media query for screen = < 575px */
