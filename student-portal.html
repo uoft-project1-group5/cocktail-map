@@ -42,8 +42,10 @@
         
         <div class="cell small-2 history">
             <button type="clear" class="button large">Clear History</button>
-            <div class="cell">
+            <div class="cell" id="search-history">
                 <!-- search history -->
+                <ul  id="search-history-ul">
+                </ul>
             </div>
         </div>
 
@@ -54,13 +56,15 @@
             <div class="cell grid-x grid-padding-x searchBar">
                 <input type="text" class="cell small-5" id="searchTerm" placeholder="enter a Cocktail" />
                 <div class="cell small-5 grid-x grid-padding-x searchBtn">
-                    <button type="search" class="button large cell small-5"><i class='fa fa-search'></i></button> 
+                    <button type="search" class="button large cell small-5" id= "search-button"><i class='fa fa-search'></i></button> 
                     <button type="search" class="button large cell small-5">Random Cocktail</button>
                 </div>
             </div>
 
             <div class="cell small-12 searchedCocktail">
                 <!-- searched cocktail information -->
+                <ul  id="cocktail-info-ul">
+                </ul>
             </div>
         </div>
 
@@ -75,6 +79,8 @@
         </div>
     </footer>
 
-    <script></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./Assets/js/scripts.js"></script>
 </body>
 </html>
