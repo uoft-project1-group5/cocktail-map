@@ -86,7 +86,6 @@ label {
 }
 
 .button {
-    ;
     background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
     transition: all .5s ease-out;
     background-size: 1px 100px;
@@ -147,7 +146,7 @@ section {
 }
 
 #google-map {
-   padding: 5vw; 
+   padding-left: 5vw; 
 }
 
 .subscription {
@@ -173,9 +172,6 @@ section {
 .searchBtn button {
     padding: 0px;
 }
-
-
-
 
 .list {
     display: grid;
