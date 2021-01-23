@@ -49,12 +49,12 @@ var saveCocktail = function(cocktail){
     cocktailsList = JSON.parse(localStorage.getItem("cocktailsList"));
     
     if (cocktailsList){
-      var cocktailObject ={text:cocktail};
+      var cocktailObject ={text:cocktail.toLowerCase()};
       
-      if (!cocktailsList.some(cocktailob => cocktailob.text == cocktail))
+      if (!cocktailsList.some(cocktailob => cocktailob.text.toLowerCase() == cocktail.toLowerCase()))
         {cocktailsList.push(cocktailObject);};
     }
-    else {if (!cocktail =="") {cocktailsList=[{text:cocktail}]};
+    else {if (!cocktail =="") {cocktailsList=[{text:cocktail.toLowerCase()}]};
         };
   
     localStorage.setItem("cocktailsList", JSON.stringify(cocktailsList));
@@ -86,13 +86,52 @@ var displayCocktail = async function(CocktailData) {
     for (var i = 0; i < CocktailData.drinks.length; i++) {
         var cocktailIngEl = document.createElement("li");
         cocktailIngEl.id="cocktail-name";
-        cocktailIngEl.innerHTML = CocktailData.drinks[i].strDrink ;
+        cocktailIngEl.innerHTML = "Name: " +CocktailData.drinks[i].strDrink ;
         cocktailIngListEl.append(cocktailIngEl);
 
         var cocktailIngEl = document.createElement("li");
         cocktailIngEl.id="cocktail-ingredient";
-        cocktailIngEl.innerHTML = CocktailData.drinks[i].strIngredient1 +"</br>"+ CocktailData.drinks[i].strIngredient2 +"</br>"+ CocktailData.drinks[i].strIngredient3+"</br>"+ CocktailData.drinks[i].strIngredient4 ;
+        cocktailIngEl.innerHTML = "Ingredients: " +CocktailData.drinks[i].strIngredient1 
+        if (!(CocktailData.drinks[i].strIngredient2==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient2};
+        if (!(CocktailData.drinks[i].strIngredient3==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient3};  
+        if (!(CocktailData.drinks[i].strIngredient4==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient4};
+        if (!(CocktailData.drinks[i].strIngredient5==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient5};  
+        if (!(CocktailData.drinks[i].strIngredient6==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient6};
+        if (!(CocktailData.drinks[i].strIngredient7==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient7};  
+        if (!(CocktailData.drinks[i].strIngredient8==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient8};
+        if (!(CocktailData.drinks[i].strIngredient9==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient9};  
+        if (!(CocktailData.drinks[i].strIngredient10==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient10};
+        if (!(CocktailData.drinks[i].strIngredient11==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient11};  
+        if (!(CocktailData.drinks[i].strIngredient12==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient12};
+        if (!(CocktailData.drinks[i].strIngredient13==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient13}; 
+        if (!(CocktailData.drinks[i].strIngredient14==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient14};
+        if (!(CocktailData.drinks[i].strIngredient15==null)) 
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient15};  
         cocktailIngListEl.append(cocktailIngEl);
+
+        var cocktailInsEl = document.createElement("li");
+        cocktailInsEl.id="cocktail-instructions";
+        cocktailInsEl.innerHTML = "Instructions: " +CocktailData.drinks[i].strInstructions ;
+        cocktailIngListEl.append(cocktailInsEl);
+
+        var cocktailImgEl = document.createElement("img");
+        cocktailImgEl.id="cocktail-image";
+        cocktailImgEl.src = CocktailData.drinks[i].strDrinkThumb;
+        cocktailImgEl.innerHTML = "</br>" ;
+        cocktailIngListEl.append(cocktailImgEl);
     };
 }
 
