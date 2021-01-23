@@ -1,24 +1,27 @@
 var submitButtonEl= document.getElementById("button-submit");
 
+var contactButtonEl= document.getElementById("contact-us-button");
+
 //save to local storage
 var saveForm = function(formObject){
 formsList = JSON.parse(localStorage.getItem("formsList"));
 
-
-
-        if (formsList && (!email =="") ){
+        if (formsList && (!formObject.email =="") ){
             if (!formsList.some(formob => formob.email == formObject.email))
                 {formsList.push(formObject);
                 alert("We received your request"); ///////////////modal
-                }
-            else {alert("The email already exists in our system")};   /////////////////// modal
+            }
+            else {alert("The email already exists in our system");
+            };   /////////////////// modal
         }
-        else { if (!email =="") { formsList=[formObject]}
-                else {alert("Please fill the email adress!"); ///////////////modal};
+        else { 
+            if (!formObject.email =="") { 
+                formsList=[formObject];
+            }
+            else {
+                alert("Please fill the email adress!"); ///////////////modal};
             };
-
-
-
+        };
 localStorage.setItem("formsList", JSON.stringify(formsList));
 };
 
@@ -32,8 +35,8 @@ var sendEmail = function(email, title, message){
 var submitForm = function(event){
     event.preventDefault();
 
-    var formNameEl= document.getElementById("name"); console.log(formNameEl);console.log(formNameEl.value);
-    var formEmailEl= document.getElementById("email");
+    var formNameEl= document.getElementById("name"); 
+    var formEmailEl= document.getElementById("email"); 
     var formPhoneEl= document.getElementById("phone");
     var formCertificateYesEl= document.getElementById("certificate-yes"); 
     var formCertificateNoEl= document.getElementById("certificate-no"); 
@@ -60,5 +63,35 @@ var submitForm = function(event){
     formCheckbox18El.checked=false;
   };
 
+// contact us
+var contactUs= function(event){
+    event.preventDefault();
+
+    var formNameEl= document.getElementById("contact-name"); 
+    var formEmailEl= document.getElementById("contact-email"); 
+    var formPhoneEl= document.getElementById("contact-phone");
+    var formMessageEl= document.getElementById("contact-message"); 
+    
+    if (formEmailEl.value=="") {
+        alert("Please add provide an email address"); ////////////////modal
+        return;
+    };
+    if (formMessageEl.value=="") {
+        alert("Please add a message");  ////////////////modal
+        return;
+    };
+    //send email
+    sendEmail ("contactus@barkeep.com", "Contact Request from: " + formNameEl.value , formEmailEl.value +" "+formPhoneEl.value +" "+formMessageEl.value)
+
+    //clear the form
+    formNameEl.value="";
+    formEmailEl.value="";
+    formPhoneEl.value="";
+    formMessageEl.value="";
+  };
+
 // click the form submit button
 submitButtonEl.addEventListener("click", submitForm);
+
+// click the contact button
+contactButtonEl.addEventListener("click", contactUs);
