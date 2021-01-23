@@ -26,7 +26,6 @@ var loadCocktails = function() {
     oldSearchEl.remove();
     var oldSearchEl = document.createElement("ul");
     oldSearchEl.id = "search-history-ul";
-    // add classlist to search history
     oldSearchEl.classList="list";
     oldSearchDivEl =document.getElementById("search-history");
     oldSearchDivEl.append(oldSearchEl);};
