@@ -22,7 +22,7 @@
     color: var(--primary); 
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 28px;
     transition: all .5s ease-out;
 }
 
@@ -199,7 +199,7 @@ section {
     }
 
     .menu li a {
-        font-size: 1.95vw; 
+        font-size: 23px; 
     }
 
     .container {
@@ -242,8 +242,17 @@ section {
         display: contents;
     }
 
+    .logo {
+        margin: auto;
+        width: 30%;
+    }
+
+    .menu li {
+        margin: auto;
+    }
+
     .menu li a {
-        font-size: 2.35vw; 
+        font-size: 18px; 
     }
 
     footer h3, footer div {
@@ -294,12 +303,8 @@ section {
         width: 100%;
     }
 
-    .logo, .menu li {
-        margin: auto;
-    }
-
     .menu li a {
-        font-size: 2.75vw;  
+        font-size: 17px;  
     }
 
     #random {
@@ -334,6 +339,10 @@ section {
     .hero-form, label {
         font-size: 15px;
     }
+
+    .logo {
+        width: 40%;
+    }
 }
 
 
@@ -353,6 +362,10 @@ section {
 
     h2 {
         font-size: 26px;
+    }
+
+    .logo {
+        width: 50%;
     }
 }
 
