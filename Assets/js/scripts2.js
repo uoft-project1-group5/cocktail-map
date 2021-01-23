@@ -14,10 +14,11 @@ var displayModal = function(modalTitle, modalText) {
   clearModal();
   var modalEl = document.createElement("div");
   modalEl.id ="modalId"
-  modalEl.innerHTML = '<div class="reveal-" id="exampleModal1" data-reveal><h1>'+modalTitle+'</h1><p class="lead">'+modalText+'</p></div>'   ///<button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
-  console.log(modalEl);
+  modalEl.innerHTML = '<div><h1>'+modalTitle+'</h1><p>'+modalText+'</p></div>'   
+
   var modalHolderEl= document.getElementById("modal-holder");
   modalHolderEl.append(modalEl);
+  console.log(modalHolderEl);
 };
 
 // clear history

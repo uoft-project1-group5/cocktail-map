@@ -2,6 +2,22 @@ var submitButtonEl= document.getElementById("button-submit");
 
 var contactButtonEl= document.getElementById("contact-us-button");
 
+//clear modal
+var clearModal = function() {
+    var modalHolderEl= document.getElementById("modalId");
+    if (modalHolderEl) {modalHolderEl.remove()};
+};
+  
+// display modal
+var displayModal = function(modalTitle, modalText) {
+    clearModal();
+    var modalEl = document.createElement("div");
+    modalEl.id ="modalId"
+    modalEl.innerHTML = '<div><h1>'+modalTitle+'</h1><p>'+modalText+'</p></div>'
+    var modalHolderEl= document.getElementById("modal-holder");
+    modalHolderEl.append(modalEl);
+};
+
 //save to local storage
 var saveForm = function(formObject){
 formsList = JSON.parse(localStorage.getItem("formsList"));
@@ -9,17 +25,17 @@ formsList = JSON.parse(localStorage.getItem("formsList"));
         if (formsList && (!formObject.email =="") ){
             if (!formsList.some(formob => formob.email == formObject.email))
                 {formsList.push(formObject);
-                alert("We received your request"); ///////////////modal
+                displayModal("Confirmation", "We received your request.");
             }
-            else {alert("The email already exists in our system");
-            };   /////////////////// modal
+            else {displayModal("Alert", "The email already exists in our system.");
+            };   
         }
         else { 
             if (!formObject.email =="") { 
                 formsList=[formObject];
             }
             else {
-                alert("Please fill the email adress!"); ///////////////modal};
+                displayModal("Alert", "Please fill the email address!");
             };
         };
 localStorage.setItem("formsList", JSON.stringify(formsList));
@@ -71,10 +87,6 @@ var contactUs= function(event){
     var formPhoneEl= document.getElementById("contact-phone");
     var formMessageEl= document.getElementById("contact-message"); 
     
-    if (formMessageEl.value=="") {
-        alert("Please add a message");  ////////////////modal
-        return;
-    };
     //send email
     sendEmail ("contactus@barkeep.com", "Contact Request from: " + formNameEl.value , formMessageEl.value +"  Phone: " + formPhoneEl.value )
 
