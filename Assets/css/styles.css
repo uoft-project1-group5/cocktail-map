@@ -80,6 +80,11 @@ h1, h2, h3 {
     box-shadow: 0 0 10px rgba(28,5,5,0.5);
 }
 
+.hero-form input {
+    color: #034137ab;
+    font-family: 'Courgette', cursive;
+}
+
 label {
     font-size: 19px;
     font-family: 'Courgette', cursive;
@@ -128,8 +133,9 @@ section {
     border: 1px solid var(--primary);
     display: block;
     padding: 7px 15px;
-    font-size: 16px;
-    color: var(--primary);
+    font-size: 17px;
+    color: #034137ab;
+    font-family: 'Courgette', cursive;
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
