@@ -68,24 +68,18 @@ var contactUs= function(event){
     event.preventDefault();
 
     var formNameEl= document.getElementById("contact-name"); 
-    var formEmailEl= document.getElementById("contact-email"); 
     var formPhoneEl= document.getElementById("contact-phone");
     var formMessageEl= document.getElementById("contact-message"); 
     
-    if (formEmailEl.value=="") {
-        alert("Please add provide an email address"); ////////////////modal
-        return;
-    };
     if (formMessageEl.value=="") {
         alert("Please add a message");  ////////////////modal
         return;
     };
     //send email
-    sendEmail ("contactus@barkeep.com", "Contact Request from: " + formNameEl.value , formEmailEl.value +" "+formPhoneEl.value +" "+formMessageEl.value)
+    sendEmail ("contactus@barkeep.com", "Contact Request from: " + formNameEl.value , formMessageEl.value +"  Phone: " + formPhoneEl.value )
 
     //clear the form
     formNameEl.value="";
-    formEmailEl.value="";
     formPhoneEl.value="";
     formMessageEl.value="";
   };
