@@ -26,6 +26,7 @@ var loadCocktails = function() {
     oldSearchEl.remove();
     var oldSearchEl = document.createElement("ul");
     oldSearchEl.id = "search-history-ul";
+    oldSearchEl.classList="list";
     oldSearchDivEl =document.getElementById("search-history");
     oldSearchDivEl.append(oldSearchEl);};
   
@@ -34,6 +35,9 @@ var loadCocktails = function() {
       for (var i = 0; i < cocktailsList.length; i++)  { 
         var cocktailEl = document.createElement("li");
         cocktailEl.id="old-cocktail";
+        // add classlist to search history
+        cocktailEl.classList="button";
+        cocktailEl.setAttribute("style", "font-family: 'Courgette', cursive;")
         cocktailEl.textContent = cocktailsList[i].text;
         oldSearchEl.append(cocktailEl);
       };
@@ -105,6 +109,7 @@ var getCocktail = function(event) {
     
         oldCocktailEl = document.getElementById("cocktail-info-ul");
         if (oldCocktailEl){
+           // displays results
             oldCocktailEl.remove();
             var oldCocktailEl = document.createElement("ul");
             oldCocktailEl.id = "cocktail-info-ul";

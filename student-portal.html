@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Login</title>
 </head>
-<body>
+<body class="portal-body">
    <!--header/navigation bar-->
     <header>
         <div class="top-bar">
-            <h1 class="top-bar-left">Online Barkeep</h1>
+            <img class="logo" src="./Assets/images/logo.png">
                 <nav class="top-bar-right">
                    <ul class="menu">
                    <li>
@@ -44,26 +44,29 @@
             <button type="clear" class="button large" id="clear-history">Clear History</button>
             <div class="cell" id="search-history">
                 <!-- search history -->
-                <ul  id="search-history-ul">
+                <ul id="search-history-ul">
                 </ul>
             </div>
         </div>
 
-        <div class="cell small-10 grid-x container">
+        <div class="cell small-9 container">
             <div class="cell">
                 <h3>Search for a drink</h3>
             </div>
             <div class="cell grid-x grid-padding-x searchBar">
                 <input type="text" class="cell small-5" id="searchTerm" placeholder="enter a Cocktail" />
-                <div class="cell small-5 grid-x grid-padding-x searchBtn">
+                <div class="cell small-5 grid-x grid-padding-x searchBtn" id="btn">
                     <button type="search" class="button large cell small-5" id= "search-button"><i class='fa fa-search'></i></button> 
                     <button type="search" class="button large cell small-5" id= "random">Random Cocktail</button>
                 </div>
             </div>
 
-            <div class="cell small-12 searchedCocktail" id="cocktail-info">
+            <div class="cell small-12" id="cocktail-info">
                 <!-- searched cocktail information -->
-                <ul  id="cocktail-info-ul">
+                <ul id="cocktail-info-ul">
+                    <li id="old-cocktail"></li>
+                    <li id="cocktail-name"></li>
+                    <li id="cocktail-ingredient"></li>
                 </ul>
             </div>
         </div>
@@ -73,8 +76,8 @@
 
     <!--footer-->
     <footer class="grid-x grid-padding-x">
-        <h3 class="cell small-9">Mix and Drink Responsibly❤️</h3> 
-        <div class="grid-x grid-padding-x align-middle">
+        <h3 class="cell small-7">Mix and Drink Responsibly❤️</h3> 
+        <div class="cell small-5">
             &copy; 2021 Online Barkeep, Inc.
         </div>
     </footer>

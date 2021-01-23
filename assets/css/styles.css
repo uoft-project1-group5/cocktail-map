@@ -22,7 +22,7 @@
     color: var(--primary); 
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 1.55vw;
+    font-size: 28px;
     transition: all .5s ease-out;
 }
 
@@ -33,12 +33,23 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Lobster', cursive;
     font-size: 26px;
     line-height: 1.8;
     color: var(--primary);
     background-color: var(--secondary);
     background-image: var(--gradient);
+}
+
+.portal-body {
+    height: 100vh;
+}
+
+footer {
+    margin-top: auto;
+    justify-content: space-between;
 }
 
 h1, h2, h3 {
@@ -48,8 +59,12 @@ h1, h2, h3 {
 .hero {
     background-image: url("../images/cocktail.gif");
     background-size: cover;
-    background-position: center;
-    
+    background-position: center; 
+}
+
+.hero-section {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .hero-form {
@@ -58,7 +73,7 @@ h1, h2, h3 {
     background-image: var(--gradient);
     padding: 20px;
     color: var(--secondary-color);
-    width: 90%;
+    width: 50%;
     margin: 3.5%;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(28,5,5,0.5);
@@ -78,6 +93,7 @@ label {
     background-position: 0 -10px;
     border-radius: 10px;
     color: var(--primary);
+    font-size: 16px;
 }
 
 .button:hover {
@@ -128,7 +144,7 @@ section {
     font-family: 'Courgette', cursive;
 }
 
-.map {
+#google-map {
    padding: 5vw; 
 }
 
@@ -138,16 +154,13 @@ section {
     color: var(--primary);
 }
 
-.searchedCocktail {
-    height: 40vw;
-}
 
 .history {
     margin-top: 35px;
 }
 
 .container {
-    margin-top: 30px;
+    margin: 30px 0 0 70px;
 }
 
 
@@ -158,3 +171,201 @@ section {
 .searchBtn button {
     padding: 0px;
 }
+
+.list {
+    display: grid;
+    gap: 2px;
+    margin: auto;
+}
+
+.logo {
+    width: 20%;
+}
+
+/* media query for screen = < 980px */
+@media screen and (max-width: 980px) {
+    .hero {
+        background-image: url("../images/barimage.jpeg");
+        background-size: cover;
+        background-position: center; 
+    }
+
+    .hero-section {
+        justify-content: center;
+    }
+
+    .hero-form {
+        width: 100%;
+    }
+
+    .menu li a {
+        font-size: 23px; 
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    footer h3, footer div {
+        font-size: 25px;
+    }
+    
+
+    .button.large {
+        font-size: 17px;
+    }
+
+    .information{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #address, #contact-form {
+        width: 50%;
+    }
+
+    .information iframe {
+        height: 400px;
+        width: 100%;
+    }
+
+    #google-map {
+        flex: 1 100%;
+    }
+}
+
+
+/* media query for screen = < 768px */
+@media screen and (max-width: 768px) {
+    .history {
+        display: contents;
+    }
+
+    .logo {
+        margin: auto;
+        width: 30%;
+    }
+
+    .menu li {
+        margin: auto;
+    }
+
+    .menu li a {
+        font-size: 18px; 
+    }
+
+    footer h3, footer div {
+        font-size: 20px;
+    }
+
+    .button.large {
+        font-size: 13px;
+    }
+
+    #searchTerm {
+        width: 55%;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .subscription{
+        font-size: 20px;
+    }
+
+    .hero-form, label {
+        font-size: 19px;
+    }
+
+   .list {
+    display: flex;
+    flex-wrap: wrap;
+   }
+}
+
+/* media query for screen = < 575px */
+@media screen and (max-width: 575px) {
+    .history {
+        display: contents;
+    }
+
+    footer h3, footer div {
+        font-size: 14px;
+    }
+
+    #searchTerm {
+        width: 100%;
+    }
+
+    .menu li a {
+        font-size: 17px;  
+    }
+
+    #random {
+        padding: 0px;
+    }
+
+    #btn {
+        padding: 0 0 0 47px;
+        width: inherit;
+    }
+
+    .information{
+        text-align: center;
+    }
+
+    #address, #contact-form {
+        width: 100%;
+    }
+
+    .information iframe {
+        height: 300px;
+    }
+
+    #google-map {
+        flex: 0 100%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .hero-form, label {
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 40%;
+    }
+}
+
+
+/* media query for screen = < 392px */
+@media screen and (max-width: 392px) {
+    #searchTerm {
+        width: 100%;
+    }
+
+    #btn {
+        padding: 0 0 0 25px;
+    }
+
+    footer h3, footer div {
+        font-size: 10px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .logo {
+        width: 50%;
+    }
+}
+
