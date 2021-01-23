@@ -27,7 +27,7 @@
 }
 
 .menu li a:hover {
-    background: #523c44;
+    background: blue;
     border-radius: 15px;
     text-shadow: none;
 }
@@ -79,11 +79,6 @@ h1, h2, h3 {
     box-shadow: 0 0 10px rgba(28,5,5,0.5);
 }
 
-.hero-form input {
-    font-family: 'Courgette', cursive;
-    color: rgb(4, 58, 50);
-}
-
 label {
     font-size: 19px;
     font-family: 'Courgette', cursive;
@@ -91,7 +86,6 @@ label {
 }
 
 .button {
-    background-color: #791a12;
     background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
     transition: all .5s ease-out;
     background-size: 1px 100px;
@@ -103,6 +97,8 @@ label {
 
 .button:hover {
     background-position: 1px -50px;
+    background-color: blue;
+    background-image: none;
 }
 
 .button:focus {
@@ -132,13 +128,12 @@ section {
     display: block;
     padding: 7px 15px;
     font-size: 16px;
-    color: rgb(4, 58, 50);
+    color: var(--primary);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
     border-radius: 10px;
     background-color: rgba(255,255,255, 0.75);
-    font-family: 'Courgette', cursive;
 }
 
 .information p, .information address, .information address a {
