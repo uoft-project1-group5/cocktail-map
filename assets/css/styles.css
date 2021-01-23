@@ -27,7 +27,7 @@
 }
 
 .menu li a:hover {
-    background: #523c44;
+    background: blue;
     border-radius: 15px;
     text-shadow: none;
 }
@@ -86,7 +86,7 @@ label {
 }
 
 .button {
-    background-color: #791a12;
+    ;
     background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
     transition: all .5s ease-out;
     background-size: 1px 100px;
@@ -98,6 +98,8 @@ label {
 
 .button:hover {
     background-position: 1px -50px;
+    background-color: blue;
+    background-image: none;
 }
 
 .button:focus {
@@ -171,6 +173,9 @@ section {
 .searchBtn button {
     padding: 0px;
 }
+
+
+
 
 .list {
     display: grid;
