@@ -2,6 +2,7 @@
     --primary: #b4e4db;
     --secondary: #86bff1ab;
     --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 57%, #791a12 84%);
+    --hover:  rgba(71, 96, 243, 0.86);
 }
 
 .top-bar {
@@ -10,7 +11,7 @@
 }
 
 .menu {
-    background-image: linear-gradient(6deg, #300a08 0%, #280706 40%, #791a12 80%);
+    background-image: linear-gradient(6deg, #300a08 0%, #280706 40%, #671610 80%);
     border-radius: 10px;
 }
 
@@ -22,12 +23,12 @@
     color: var(--primary); 
     padding: 10px 15px;
     font-weight: lighter;
-    font-size: 28px;
+    font-size: 27px;
     transition: all .5s ease-out;
 }
 
 .menu li a:hover {
-    background: blue;
+    background: var(--hover);
     border-radius: 15px;
     text-shadow: none;
 }
@@ -44,7 +45,7 @@ body {
 }
 
 .portal-body {
-    height: 100vh;
+    height: 125vh;
 }
 
 footer {
@@ -97,7 +98,7 @@ label {
 
 .button:hover {
     background-position: 1px -50px;
-    background-color: blue;
+    background-color: var(--hover);
     background-image: none;
 }
 
@@ -180,7 +181,11 @@ section {
 }
 
 .logo {
-    width: 20%;
+    width: 80%;
+}
+
+.link{
+    width: 21%;
 }
 
 /* media query for screen = < 980px */
@@ -199,8 +204,12 @@ section {
         width: 100%;
     }
 
+    .menu li {
+        margin: auto;
+    }
+
     .menu li a {
-        font-size: 23px; 
+        font-size: 22px; 
     }
 
     .container {
@@ -234,26 +243,30 @@ section {
     #google-map {
         flex: 1 100%;
     }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .history {
+        display: contents;
+    }
+
+    .link {
+        width: 30%;
+    }
 }
 
 
 /* media query for screen = < 768px */
 @media screen and (max-width: 768px) {
-    .history {
-        display: contents;
-    }
-
-    .logo {
-        margin: auto;
-        width: 30%;
-    }
-
     .menu li {
         margin: auto;
     }
 
     .menu li a {
-        font-size: 18px; 
+        font-size: 19px; 
     }
 
     footer h3, footer div {
@@ -284,10 +297,13 @@ section {
         font-size: 19px;
     }
 
-   .list {
-    display: flex;
-    flex-wrap: wrap;
-   }
+    .link {
+        width: 30%;
+    }
+
+    .logo {
+        width: 70%;
+    }
 }
 
 /* media query for screen = < 575px */
@@ -341,8 +357,13 @@ section {
         font-size: 15px;
     }
 
+    .link {
+        width: 100%;
+    }
+
     .logo {
         width: 40%;
+        margin: 0 28vw;
     }
 }
 
@@ -367,6 +388,7 @@ section {
 
     .logo {
         width: 50%;
+        margin: 0 28vw;
     }
 }
 
