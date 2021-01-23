@@ -3,9 +3,26 @@ var oldCocktailEl= document.getElementById("search-history");
 var clearHirstoryEl= document.getElementById("clear-history");
 var randomEl= document.getElementById("random");
 
+//clear modal
+var clearModal = function() {
+  var modalHolderEl= document.getElementById("modalId");
+  if (modalHolderEl) {modalHolderEl.remove()};
+};
+
+// display modal
+var displayModal = function(modalTitle, modalText) {
+  clearModal();
+  var modalEl = document.createElement("div");
+  modalEl.id ="modalId"
+  modalEl.innerHTML = '<div class="reveal-" id="exampleModal1" data-reveal><h1>'+modalTitle+'</h1><p class="lead">'+modalText+'</p></div>'   ///<button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
+  console.log(modalEl);
+  var modalHolderEl= document.getElementById("modal-holder");
+  modalHolderEl.append(modalEl);
+};
 
 // clear history
 var clearHistory = function() {
+    clearModal();
     cocktailsList=[] ;
     localStorage.setItem("cocktailsList", JSON.stringify(cocktailsList));
     loadCocktails();
@@ -67,7 +84,7 @@ var displayCocktail = async function(CocktailData) {
     
     // check if api returned any data
     if (CocktailData.drinks.length === 0) {
-      alert("No data found.");   ///////////////////////////// to be replaced by modal
+      displayModal("API Issue", "Contact the website administrator. No data found.");
       return;
     };
     
@@ -137,6 +154,7 @@ var displayCocktail = async function(CocktailData) {
 
 // call api to get the cocktail details
 var getCocktail = function(event) {
+    clearModal();
     var checkRandom = false;
     //get the cocktail name from the search form
     if ($(this)[0].id=="search-button" || $(this)[0].id=="random"){
@@ -161,7 +179,7 @@ var getCocktail = function(event) {
   
     // check if there is a string in the city name field
     if ( (checkRandom == false) && cocktail.length == 0) {
-      alert("Please enter a Cocktail name.");  ///////////////////////////// to be replaced by modal
+      displayModal("Missing Data", "Please enter a cocktail name.");
       return;
     };
     
@@ -180,15 +198,17 @@ var getCocktail = function(event) {
                 else {saveCocktail(data.drinks[0].strDrink)};
                 displayCocktail(data);
               }
-              else {alert("Sorry, we don't have this drink!")};  ///////////////////////////// to be replaced by modal};
+              else {
+                  displayModal("Cocktail Not Found","Sorry, we don't have this cocktail!");
+              };  
           });
         } else {
-          alert("Error: " + response.statusText);  ///////////////////////////// to be replaced by modal
+          displayModal("Error","Contact the website administrator. "+response.statusText);
         }
       })
   
       .catch(function(error) {
-        alert("Unable to connect" + error);  ///////////////////////////// to be replaced by modal
+        displayModal("Unable To Connect","Contact the website administrator. "+error)
       });
   };
 
