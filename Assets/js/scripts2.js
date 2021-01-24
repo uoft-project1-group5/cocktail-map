@@ -55,7 +55,7 @@ var loadCocktails = function() {
         cocktailEl.id="old-cocktail";
         // add classlist to search history
         cocktailEl.classList="button";
-        cocktailEl.setAttribute("style", "font-family: 'Courgette', cursive;")
+        cocktailEl.setAttribute("style", "font-family: 'Courgette', cursive;");
         cocktailEl.textContent = cocktailsList[i].text;
         oldSearchEl.append(cocktailEl);
       };
@@ -94,6 +94,7 @@ var displayCocktail = async function(CocktailData) {
     oldCocktailEl.remove();
     var oldCocktailEl = document.createElement("ul");
     oldCocktailEl.id = "cocktail-info-ul";
+    oldCocktailEl.setAttribute("style", "font-family: 'Courgette', cursive;");
     oldCocktailDivEl =document.getElementById("cocktail-info");
     oldCocktailDivEl.append(oldCocktailEl);
     };
