@@ -3,8 +3,57 @@
     --secondary: #86bff1ab;
     --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 57%, #791a12 84%);
     --hover:  rgba(71, 96, 243, 0.86);
+    --input: #022520ab;
+    --lobster: 'Lobster', cursive;
+    --courgette: 'Courgette', cursive;
 }
 
+/* body for both page and footer style */
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--lobster);
+    font-size: 26px;
+    line-height: 1.8;
+    color: var(--primary);
+    background-color: var(--secondary);
+    background-image: var(--gradient);
+}
+
+.portal-html {
+    height: 100%;
+}
+
+.portal-body {
+    height: 100%;
+    background-attachment: fixed;
+}
+
+footer {
+    margin-top: auto;
+    justify-content: space-between;
+    position: inherit;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
+h1, h2, h3 {
+    font-family: var(--lobster);
+}
+
+/* logo style for both page */
+.logo {
+    width: 80%;
+}
+
+.link{
+    width: 21%;
+}
+
+/* navigator bar style */
 .top-bar {
     background-color: var(--secondary);
     background-image: var(--gradient);
@@ -33,30 +82,7 @@
     text-shadow: none;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Lobster', cursive;
-    font-size: 26px;
-    line-height: 1.8;
-    color: var(--primary);
-    background-color: var(--secondary);
-    background-image: var(--gradient);
-}
-
-.portal-body {
-    height: 125vh;
-}
-
-footer {
-    margin-top: auto;
-    justify-content: space-between;
-}
-
-h1, h2, h3 {
-    font-family: 'Lobster', cursive;
-}
-
+/* hero sections and hero form style */
 .hero {
     background-image: url("../images/cocktail.gif");
     background-size: cover;
@@ -81,16 +107,17 @@ h1, h2, h3 {
 }
 
 .hero-form input {
-    color: #034137ab;
-    font-family: 'Courgette', cursive;
+    color: var(--input);
+    font-family: var(--courgette);
 }
 
 label {
     font-size: 19px;
-    font-family: 'Courgette', cursive;
+    font-family: var(--courgette);
     color: var(--primary);
 }
 
+/* button style */
 .button {
     background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
     transition: all .5s ease-out;
@@ -111,6 +138,7 @@ label {
     outline: none;
 }
 
+/* sections style */
 section {
     padding: 60px;
 }
@@ -125,6 +153,14 @@ section {
     width: 50%;
 }
 
+/* subscription style */ 
+.subscription {
+    font-size: 26px;
+    font-family: var(--courgette);
+    color: var(--primary);
+}
+
+/* reach out section style */
 .information {
     width: 100%;
 }
@@ -134,8 +170,8 @@ section {
     display: block;
     padding: 7px 15px;
     font-size: 17px;
-    color: #034137ab;
-    font-family: 'Courgette', cursive;
+    color: var(--input);
+    font-family: var(--courgette);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -149,24 +185,19 @@ section {
     font-size: 19px;
     font-style: normal;
     color: var(--primary);
-    font-family: 'Courgette', cursive;
+    font-family: var(--courgette);
 }
 
 #google-map {
    padding-left: 5vw; 
 }
 
-.subscription {
-    font-size: 26px;
-    font-family: 'Courgette', cursive;
-    color: var(--primary);
-}
-
-
+/* student portal search history style */
 .history {
     margin-top: 35px;
 }
 
+/* search cocktail style*/
 .container {
     margin: 30px 0 0 70px;
 }
@@ -180,18 +211,11 @@ section {
     padding: 0px;
 }
 
+/* searched history list style */
 .list {
     display: grid;
     gap: 2px;
     margin: auto;
-}
-
-.logo {
-    width: 80%;
-}
-
-.link{
-    width: 21%;
 }
 
 /* media query for screen = < 980px */
