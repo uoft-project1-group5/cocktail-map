@@ -50,6 +50,7 @@ var sendEmail = function(email, title, message){
 // submit the form
 var submitForm = function(event){
     event.preventDefault();
+    clearModal();
 
     var formNameEl= document.getElementById("name"); 
     var formEmailEl= document.getElementById("email"); 
@@ -82,6 +83,7 @@ var submitForm = function(event){
 // contact us
 var contactUs= function(event){
     event.preventDefault();
+    clearModal();
 
     var formNameEl= document.getElementById("contact-name"); 
     var formPhoneEl= document.getElementById("contact-phone");
