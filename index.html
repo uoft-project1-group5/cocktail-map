@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Assets/css/styles.css" />
+    <title>Online Barkeep</title>
+</head>
+
+<body>
+    <!--header/navigation bar-->
+    <header>
+        <div class="top-bar">
+            <a href="./index.html"><img class="logo" src="./Assets/images/logo.png"></a>
+            <nav class="top-bar-right">
+                <ul class="menu">
+                    <li>
+                        <a href="#about-us">About us</a>
+                    </li>
+                    <li>
+                        <a href="#Sign-up">Sign up</a>
+                    </li>
+                    <li>
+                        <a href="#subscription">Subscription</a>
+                    </li>
+                    <li>
+                        <a href="#contact-us">Contact us</a>
+                    </li>
+                    <li>
+                        <a href="./student-portal.html">Student Portal</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--hero/jumbotron-->
+    <section class="hero grid-x" id="Sign-up">
+        <div class="cell">
+            <div class="grid-x hero-section">
+                
+                <div class="cell hero-form">
+                    <h3>Sign up here</h3>
+                    <p>Fill this out and one of our Barkeep registrars will schedule a consult</p>
+                    <form>
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell">
+                                <label for="name">Enter full name:</label>
+                                <input type="text" placeholder="Your Name" name="name" id="name" class="form-input">
+                            </div>
+
+                            <div class="cell">
+                                <label for="email">Enter email address:</label>
+                                <input type="text" placeholder="Email Address" name="email" id="email"
+                                    class="form-input">
+                            </div>
+
+                            <div class="cell">
+                                <label for="phone">Enter a telephone number:</label>
+                                <input type="text" placeholder="Phone Number" name="phone" id="phone"
+                                    class="form-input">
+                            </div>
+
+                            <div class="cell">
+                                <p>Do you currently have a Smart Serve Certificate?</p>
+                                <div>
+                                    <span class="radio-wrapper">
+                                        <input type="radio" name="certificate-confirm" id="certificate-yes" />
+                                        <label for="certificate-yes">Yes</label>
+                                    </span>
+                                    <span class="radio-wrapper">
+                                        <input type="radio" name="certificate-confirm" id="certificate-no" />
+                                        <label for="certificate-no">No</label>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="cell">
+                                <span class="checkbox-wrapper">
+                                    <input type="checkbox" name="age-confirm" id="checkbox-18" />
+                                    <label for="checkbox">I acknowledge that I am at least 18 years of age.</label>
+                                </span>
+                            </div>
+
+                            <div class="cell">
+                                <button class="button large" id="button-submit" type="submit">
+                                    Submit!
+                                </button>
+                            </div>
+                            <div class ="cell" id="modal-holder"></div>  <!-- modal holder -->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--About Us Section-->
+    <section id="about-us" class="grid-x grid-padding-x center">
+        <div class="cell section-title">
+            <h2>About Us</h2>
+        </div>
+
+        <div class="cell small-12">
+            <p>
+                Online Barkeep is a subscription-based website that will allow learners access to ingredients and
+                recipes to foster a learning environment to prepare students for the work-field. At Online Barkeep, we
+                bring a positive learning experience coupled with our massive database of drinks to create the perfect
+                learning experiences. We are dedicated to creating world class bartenders who will succeed and thrive in
+                every environment. Join today, and get unlimited access to all the ingredients and learn how to
+                signature the perfect cocktails.
+            </p>
+        </div>
+    </section>
+
+    <!-- Subscription -->
+    <section id="subscription">
+        <div class="section-title">
+            <h2>Subscription</h2>
+        </div>
+        <div class="grid-x grid-padding-x align-center-middle text-center">
+            <div class="grid-x grid-padding-x align-center-middle subscription">
+                <div class="cell">
+                    Cancel At Any Time!
+                </div>
+                <div class="cell small-6">
+                    Basic
+                </div>
+                <div class="cell small-6">
+                    Premium
+                </div>
+                <div class="cell small-6">
+                    $10/month
+                </div>
+                <div class="cell small-6">
+                    $100/year
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Contact Us Section-->
+    <section id="contact-us" class="grid-x grid-padding-x">
+        <div class="cell section-title">
+            <h2>Reach Out</h2>
+        </div>
+        <div class="grid-x grid-padding-x information">
+            <div class="cell small-4" id="address">
+                <h3>Online Barkeep</h3>
+                <p>
+                    Any questions or concerns before signing up?
+                    <br />
+                    Let us know and we'll be happy to talk to you!
+                </p>
+
+                <address>
+                    64 Yonge Street<br />
+                    Toronto, ON <br />
+                    M5J 1Z1 <br />
+                    P: <a href="tel:416.227.5337">(416)BAR-KEEP(416.227.5337)</a><br />
+                    E: <a href="mailto://contactus@barkeep.com">contactus@barkeep.com</a>
+                </address>
+            </div>
+
+            <div class="cell small-3" id="contact-form">
+                <h3>Contact Us</h3>
+                <form>
+                  <label for="contact-name">Your Name</label>
+                  <input type="text" id="contact-name" placeholder="Your Name" />
+                  <label for="contact-phone">Phone Number</label>
+                  <input type="text" id="contact-phone" placeholder="Your Phone" />
+                  <label for="contact-message">Message</label>
+                  <textarea id="contact-message" placeholder="Message"></textarea>
+            
+                  <button class="button large" type="submit" id="contact-us-button">Submit</button>
+                </form>
+            </div>
+
+            <div class="cell small-5" id="google-map">
+                <h3>Where We Are</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.98066184945!2d-79.38003404804724!3d43.64857067901885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb3281c78193%3A0x3309c08402897c30!2s64%20Yonge%20St%2C%20Toronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2sus!4v1611419021662!5m2!1sen!2sus"
+                    width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                    tabindex="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+    <footer class="grid-x grid-padding-x">
+        <h3 class="cell small-7">Mix and Drink Responsibly❤️</h3>
+        <div class="cell small-5">
+            &copy; 2021 Online Barkeep, Inc.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./Assets/js/scripts1.js"></script>
+</body>
+
+</html>

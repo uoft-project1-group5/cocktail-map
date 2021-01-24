@@ -1,0 +1,400 @@
+:root {
+    --primary: #b4e4db;
+    --secondary: #86bff1ab;
+    --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 57%, #791a12 84%);
+    --hover:  rgba(71, 96, 243, 0.86);
+}
+
+.top-bar {
+    background-color: var(--secondary);
+    background-image: var(--gradient);
+}
+
+.menu {
+    background-image: linear-gradient(6deg, #300a08 0%, #280706 40%, #671610 80%);
+    border-radius: 10px;
+}
+
+.menu li {
+    border-radius: 10px;
+}
+
+.menu li a {
+    color: var(--primary); 
+    padding: 10px 15px;
+    font-weight: lighter;
+    font-size: 27px;
+    transition: all .5s ease-out;
+}
+
+.menu li a:hover {
+    background: var(--hover);
+    border-radius: 15px;
+    text-shadow: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    line-height: 1.8;
+    color: var(--primary);
+    background-color: var(--secondary);
+    background-image: var(--gradient);
+}
+
+.portal-body {
+    height: 125vh;
+}
+
+footer {
+    margin-top: auto;
+    justify-content: space-between;
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+}
+
+.hero {
+    background-image: url("../images/cocktail.gif");
+    background-size: cover;
+    background-position: center; 
+}
+
+.hero-section {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-form {
+    border: 3px solid rgba(78, 13, 9, 0.8);
+    background-color: var(--secondary);
+    background-image: var(--gradient);
+    padding: 20px;
+    color: var(--secondary-color);
+    width: 50%;
+    margin: 3.5%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(28,5,5,0.5);
+}
+
+.hero-form input {
+    color: #034137ab;
+    font-family: 'Courgette', cursive;
+}
+
+label {
+    font-size: 19px;
+    font-family: 'Courgette', cursive;
+    color: var(--primary);
+}
+
+.button {
+    background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
+    transition: all .5s ease-out;
+    background-size: 1px 100px;
+    background-position: 0 -10px;
+    border-radius: 10px;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.button:hover {
+    background-position: 1px -50px;
+    background-color: var(--hover);
+    background-image: none;
+}
+
+.button:focus {
+    outline: none;
+}
+
+section {
+    padding: 60px;
+}
+
+.section-title {
+    font-size: 48px;
+    border-bottom: 3px solid var(--primary);
+    color: var(--primary);
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 0 auto 35px auto;
+    width: 50%;
+}
+
+.information {
+    width: 100%;
+}
+
+.information input, .information textarea {
+    border: 1px solid var(--primary);
+    display: block;
+    padding: 7px 15px;
+    font-size: 17px;
+    color: #034137ab;
+    font-family: 'Courgette', cursive;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: #fefefe;
+}
+
+.information p, .information address, .information address a {
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 19px;
+    font-style: normal;
+    color: var(--primary);
+    font-family: 'Courgette', cursive;
+}
+
+#google-map {
+   padding-left: 5vw; 
+}
+
+.subscription {
+    font-size: 26px;
+    font-family: 'Courgette', cursive;
+    color: var(--primary);
+}
+
+
+.history {
+    margin-top: 35px;
+}
+
+.container {
+    margin: 30px 0 0 70px;
+}
+
+
+.searchBar, .searchBtn {
+    gap: 14px;
+}
+
+.searchBtn button {
+    padding: 0px;
+}
+
+.list {
+    display: grid;
+    gap: 2px;
+    margin: auto;
+}
+
+.logo {
+    width: 80%;
+}
+
+.link{
+    width: 21%;
+}
+
+/* media query for screen = < 980px */
+@media screen and (max-width: 980px) {
+    .hero {
+        background-image: url("../images/barimage.jpeg");
+        background-size: cover;
+        background-position: center; 
+    }
+
+    .hero-section {
+        justify-content: center;
+    }
+
+    .hero-form {
+        width: 100%;
+    }
+
+    .menu li {
+        margin: auto;
+    }
+
+    .menu li a {
+        font-size: 22px; 
+    }
+
+    .container {
+        margin: auto;
+    }
+
+    footer h3, footer div {
+        font-size: 25px;
+    }
+    
+
+    .button.large {
+        font-size: 17px;
+    }
+
+    .information{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    #address, #contact-form {
+        width: 50%;
+    }
+
+    .information iframe {
+        height: 400px;
+        width: 100%;
+    }
+
+    #google-map {
+        flex: 1 100%;
+    }
+
+    .list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .history {
+        display: contents;
+    }
+
+    .link {
+        width: 30%;
+    }
+}
+
+
+/* media query for screen = < 768px */
+@media screen and (max-width: 768px) {
+    .menu li {
+        margin: auto;
+    }
+
+    .menu li a {
+        font-size: 19px; 
+    }
+
+    footer h3, footer div {
+        font-size: 20px;
+    }
+
+    .button.large {
+        font-size: 13px;
+    }
+
+    #searchTerm {
+        width: 55%;
+    }
+
+    body {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    .subscription{
+        font-size: 20px;
+    }
+
+    .hero-form, label {
+        font-size: 19px;
+    }
+
+    .link {
+        width: 30%;
+    }
+
+    .logo {
+        width: 70%;
+    }
+}
+
+/* media query for screen = < 575px */
+@media screen and (max-width: 575px) {
+    .history {
+        display: contents;
+    }
+
+    footer h3, footer div {
+        font-size: 14px;
+    }
+
+    #searchTerm {
+        width: 100%;
+    }
+
+    .menu li a {
+        font-size: 17px;  
+    }
+
+    #random {
+        padding: 0px;
+    }
+
+    #btn {
+        padding: 0 0 0 47px;
+        width: inherit;
+    }
+
+    .information{
+        text-align: center;
+    }
+
+    #address, #contact-form {
+        width: 100%;
+    }
+
+    .information iframe {
+        height: 300px;
+    }
+
+    #google-map {
+        flex: 0 100%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    .hero-form, label {
+        font-size: 15px;
+    }
+
+    .link {
+        width: 100%;
+    }
+
+    .logo {
+        width: 40%;
+        margin: 0 28vw;
+    }
+}
+
+
+/* media query for screen = < 392px */
+@media screen and (max-width: 392px) {
+    #searchTerm {
+        width: 100%;
+    }
+
+    #btn {
+        padding: 0 0 0 25px;
+    }
+
+    footer h3, footer div {
+        font-size: 10px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .logo {
+        width: 50%;
+        margin: 0 28vw;
+    }
+}
+
