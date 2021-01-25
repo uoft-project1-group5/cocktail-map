@@ -2,13 +2,18 @@
     --primary: #b4e4db;
     --secondary: #86bff1ab;
     --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 57%, #791a12 84%);
-    --hover:  rgba(71, 96, 243, 0.86);
+    --hover: rgba(71, 96, 243, 0.86);
     --input: #022520ab;
     --lobster: 'Lobster', cursive;
     --courgette: 'Courgette', cursive;
 }
 
+html {
+    height: 100%;
+}
+
 /* body for both page and footer style */
+
 body {
     display: flex;
     flex-direction: column;
@@ -18,13 +23,6 @@ body {
     color: var(--primary);
     background-color: var(--secondary);
     background-image: var(--gradient);
-}
-
-.portal-html {
-    height: 100%;
-}
-
-.portal-body {
     height: 100%;
     background-attachment: fixed;
 }
@@ -45,15 +43,17 @@ h1, h2, h3 {
 }
 
 /* logo style for both page */
+
 .logo {
     width: 80%;
 }
 
-.link{
+.link {
     width: 21%;
 }
 
 /* navigator bar style */
+
 .top-bar {
     background-color: var(--secondary);
     background-image: var(--gradient);
@@ -69,7 +69,7 @@ h1, h2, h3 {
 }
 
 .menu li a {
-    color: var(--primary); 
+    color: var(--primary);
     padding: 10px 15px;
     font-weight: lighter;
     font-size: 27px;
@@ -83,10 +83,11 @@ h1, h2, h3 {
 }
 
 /* hero sections and hero form style */
+
 .hero {
     background-image: url("../images/cocktail.gif");
     background-size: cover;
-    background-position: center; 
+    background-position: center;
 }
 
 .hero-section {
@@ -103,7 +104,7 @@ h1, h2, h3 {
     width: 50%;
     margin: 3.5%;
     border-radius: 15px;
-    box-shadow: 0 0 10px rgba(28,5,5,0.5);
+    box-shadow: 0 0 10px rgba(28, 5, 5, 0.5);
 }
 
 .hero-form input {
@@ -118,6 +119,7 @@ label {
 }
 
 /* button style */
+
 .button {
     background-image: linear-gradient(6deg, #4e0d09 0%, #791a12 52%, #8e8b5d 90%);
     transition: all .5s ease-out;
@@ -126,6 +128,12 @@ label {
     border-radius: 10px;
     color: var(--primary);
     font-size: 16px;
+}
+
+.center-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button:hover {
@@ -139,6 +147,7 @@ label {
 }
 
 /* sections style */
+
 section {
     padding: 60px;
 }
@@ -153,7 +162,8 @@ section {
     width: 50%;
 }
 
-/* subscription style */ 
+/* subscription style */
+
 .subscription {
     font-size: 26px;
     font-family: var(--courgette);
@@ -161,6 +171,7 @@ section {
 }
 
 /* reach out section style */
+
 .information {
     width: 100%;
 }
@@ -189,19 +200,20 @@ section {
 }
 
 #google-map {
-   padding-left: 5vw; 
+    padding-left: 5vw;
 }
 
 /* student portal search history style */
+
 .history {
     margin-top: 35px;
 }
 
 /* search cocktail style*/
+
 .container {
     margin: 30px 0 0 70px;
 }
-
 
 .searchBar, .searchBtn {
     gap: 14px;
@@ -212,213 +224,179 @@ section {
 }
 
 /* searched history list style */
+
 .list {
     display: grid;
     gap: 2px;
     margin: auto;
 }
 
+#map {
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+}
+
 /* media query for screen = < 980px */
+
 @media screen and (max-width: 980px) {
     .hero {
         background-image: url("../images/barimage.jpeg");
         background-size: cover;
-        background-position: center; 
+        background-position: center;
     }
-
     .hero-section {
         justify-content: center;
     }
-
     .hero-form {
         width: 100%;
     }
-
     .menu li {
         margin: auto;
     }
-
     .menu li a {
-        font-size: 22px; 
+        font-size: 22px;
     }
-
     .container {
         margin: auto;
     }
-
     footer h3, footer div {
         font-size: 25px;
     }
-    
-
     .button.large {
         font-size: 17px;
     }
-
-    .information{
+    .information {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
     }
-
     #address, #contact-form {
         width: 50%;
     }
-
     .information iframe {
         height: 400px;
         width: 100%;
     }
-
     #google-map {
         flex: 1 100%;
     }
-
     .list {
         display: flex;
         flex-wrap: wrap;
     }
-
     .history {
         display: contents;
     }
-
     .link {
         width: 30%;
     }
 }
 
-
 /* media query for screen = < 768px */
+
 @media screen and (max-width: 768px) {
     .menu li {
         margin: auto;
     }
-
     .menu li a {
-        font-size: 19px; 
+        font-size: 19px;
     }
-
     footer h3, footer div {
         font-size: 20px;
     }
-
     .button.large {
         font-size: 13px;
     }
-
     #searchTerm {
         width: 55%;
     }
-
     body {
         font-size: 20px;
     }
-
     h2 {
         font-size: 40px;
     }
-
-    .subscription{
+    .subscription {
         font-size: 20px;
     }
-
     .hero-form, label {
         font-size: 19px;
     }
-
     .link {
         width: 30%;
     }
-
     .logo {
         width: 70%;
     }
 }
 
 /* media query for screen = < 575px */
+
 @media screen and (max-width: 575px) {
     .history {
         display: contents;
     }
-
     footer h3, footer div {
         font-size: 14px;
     }
-
     #searchTerm {
         width: 100%;
     }
-
     .menu li a {
-        font-size: 17px;  
+        font-size: 17px;
     }
-
     #random {
         padding: 0px;
     }
-
     #btn {
         padding: 0 0 0 47px;
         width: inherit;
     }
-
-    .information{
+    .information {
         text-align: center;
     }
-
     #address, #contact-form {
         width: 100%;
     }
-
     .information iframe {
         height: 300px;
     }
-
     #google-map {
         flex: 0 100%;
     }
-
     h2 {
         font-size: 30px;
     }
-
     .hero-form, label {
         font-size: 15px;
     }
-
     .link {
         width: 100%;
     }
-
     .logo {
         width: 40%;
         margin: 0 28vw;
     }
 }
 
-
 /* media query for screen = < 392px */
+
 @media screen and (max-width: 392px) {
     #searchTerm {
         width: 100%;
     }
-
     #btn {
         padding: 0 0 0 25px;
     }
-
     footer h3, footer div {
         font-size: 10px;
     }
-
     h2 {
         font-size: 26px;
     }
-
     .logo {
         width: 50%;
         margin: 0 28vw;
     }
 }
-

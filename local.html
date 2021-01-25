@@ -9,6 +9,10 @@
         integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
     <link rel="stylesheet" href="./Assets/css/styles.css" />
     <title>Local Resources</title>
+
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 
 <body>
@@ -19,18 +23,21 @@
     <!--About Us Section-->
     <section id="about-us" class="grid-x grid-padding-x center">
         <div class="cell section-title">
-            <h2>About Us</h2>
+            <h2>Find Local Supplies</h2>
         </div>
 
         <div class="cell small-12">
-            <p>
-                Online Barkeep is a subscription-based website that will allow learners access to ingredients and
-                recipes to foster a learning environment to prepare students for the work-field. At Online Barkeep, we
-                bring a positive learning experience coupled with our massive database of drinks to create the perfect
-                learning experiences. We are dedicated to creating world class bartenders who will succeed and thrive in
-                every environment. Join today, and get unlimited access to all the ingredients and learn how to
-                signature the perfect cocktails.
+            <p class="text-center">
+                Find local alcohol supplies! Enter your address get your location automatically or enter your location
+                below to find your liquor stores near you.
             </p>
+            <button class="button large center-item" id="get-address">
+                Get Local Address
+            </button>
+
+        </div>
+
+        <div class="center-item" id="map">
         </div>
     </section>
 
@@ -41,7 +48,17 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="./Assets/js/load.js"></script>
-    <script src="./Assets/js/scripts1.js"></script>
+    <script src="./Assets/js/scripts-local.js"></script>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JvdXAtNS1vbmxpbmUtYmFya2VlcCIsImEiOiJja2tjOHdydWYwNTZoMm9zMmozam80cDUxIn0.jYRAupKrfNZZpL49ghB0HQ';
+        var map = new mapboxgl.Map({
+            container: 'map', // Container ID
+            style: 'mapbox://styles/mapbox/streets-v11', // Map style to use
+            center: [-122.25948, 37.87221], // Starting position [lng, lat]
+            zoom: 12, // Starting zoom level
+        });
+    </script>
 </body>
 
 </html>
