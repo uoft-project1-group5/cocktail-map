@@ -19,7 +19,7 @@ formsList = JSON.parse(localStorage.getItem("formsList"));
                 formsList=[formObject];
             }
             else {
-                alert("Please fill the email adress!"); ///////////////modal};
+                alert("Please fill the email address!"); ///////////////modal};
             };
         };
 localStorage.setItem("formsList", JSON.stringify(formsList));
