@@ -82,6 +82,34 @@ var saveCocktail = function(cocktail){
     loadCocktails();
   };
 
+var getIngredientDetails = async function (ingredient) {
+
+    var ingDetailsStr ="";
+
+    // format the github api url
+    apiUrl ="https://api.edamam.com/api/food-database/v2/parser?ingr="+ingredient+"&app_id=3d5b7fff&app&app_key=d790dd5b406309223437f7016369357b";
+  
+    // make a request to the url
+    await fetch(apiUrl)
+      .then(async function(response) {
+        // request was successful
+        if (await response.ok) {
+          await response.json().then(async function(data) {
+              if (await data.parsed[0]) {
+                var ingDetails= await data.parsed[0].food.nutrients ;
+                ingDetailsStr = "CHOCDF: "+ingDetails.CHOCDF+" ENERC_KCAL: "+ingDetails.ENERC_KCAL+" FAT: "+ingDetails.FAT+" FIBTG: "+ingDetails.FIBTG+" PROCNT: "+ingDetails.PROCNT;
+              };
+          });
+        } else {
+          displayModal("Contact the website administrator. "+response.statusText);
+        }
+      })
+      .catch(function(error) {
+        displayModal("Contact the website administrator. "+error)
+      });
+      return ingDetailsStr ;
+}
+
 // display the cocktail details
 var displayCocktail = async function(CocktailData) {
     
@@ -107,14 +135,14 @@ var displayCocktail = async function(CocktailData) {
     for (var i = 0; i < CocktailData.drinks.length; i++) {
         var cocktailIngEl = document.createElement("li");
         cocktailIngEl.id="cocktail-name";
-        cocktailIngEl.innerHTML = "Name: " +CocktailData.drinks[i].strDrink ;
+        cocktailIngEl.innerHTML = "Name: " +CocktailData.drinks[i].strDrink ; 
         cocktailIngListEl.append(cocktailIngEl);
 
         var cocktailIngEl = document.createElement("li");
         cocktailIngEl.id="cocktail-ingredient";
         cocktailIngEl.innerHTML = "Ingredients: " +CocktailData.drinks[i].strIngredient1 
         if (!(CocktailData.drinks[i].strIngredient2==null)) 
-          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient2};
+          {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient2}; 
         if (!(CocktailData.drinks[i].strIngredient3==null)) 
           {cocktailIngEl.innerHTML=cocktailIngEl.innerHTML+", "+ CocktailData.drinks[i].strIngredient3};  
         if (!(CocktailData.drinks[i].strIngredient4==null)) 
@@ -147,6 +175,14 @@ var displayCocktail = async function(CocktailData) {
         cocktailInsEl.id="cocktail-instructions";
         cocktailInsEl.innerHTML = "Instructions: " +CocktailData.drinks[i].strInstructions ;
         cocktailIngListEl.append(cocktailInsEl);
+
+        var nutrients = await getIngredientDetails(CocktailData.drinks[i].strDrink);
+        if (!(nutrients=="")) {
+          var cocktailIngDetEl = document.createElement("li");
+          cocktailIngDetEl.id="cocktail-nutrients";
+          cocktailIngDetEl.innerHTML = "Nutrients: " +nutrients;
+          cocktailIngListEl.append(cocktailIngDetEl);
+        };
 
         var cocktailImgEl = document.createElement("img");
         cocktailImgEl.id="cocktail-image";
