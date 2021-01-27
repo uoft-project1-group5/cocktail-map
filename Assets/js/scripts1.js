@@ -1,21 +1,25 @@
 var submitButtonEl= document.getElementById("button-submit");
-
 var contactButtonEl= document.getElementById("contact-us-button");
+var modalHolderEl = document.getElementById("modal-holder");
 
 //clear modal
 var clearModal = function() {
-    var modalHolderEl= document.getElementById("modalId");
-    if (modalHolderEl) {modalHolderEl.remove()};
+  var modalEl= document.getElementById("modalId");
+  if (modalEl) {
+    modalEl.remove()
+  };
 };
-  
+
 // display modal
-var displayModal = function(modalTitle, modalText) {
-    clearModal();
-    var modalEl = document.createElement("div");
-    modalEl.id ="modalId"
-    modalEl.innerHTML = '<div><h1>'+modalTitle+'</h1><p>'+modalText+'</p></div>'
-    var modalHolderEl= document.getElementById("modal-holder");
-    modalHolderEl.append(modalEl);
+var displayModal = function( modalText) {
+  clearModal();
+  var modalEl = document.createElement("div");
+  modalEl.id ="modalId"
+  modalEl.classList ="modal"
+  modalEl.innerHTML = '<div class="modal-content"><span class="close" id="close">&times;</span><p>'+modalText+'</p></div>'
+  var modalHolderEl= document.getElementById("modal-holder");
+  modalHolderEl.append(modalEl);
+  modalEl.style.display = "block";
 };
 
 //save to local storage
@@ -25,9 +29,9 @@ formsList = JSON.parse(localStorage.getItem("formsList"));
         if (formsList && (!formObject.email =="") ){
             if (!formsList.some(formob => formob.email == formObject.email))
                 {formsList.push(formObject);
-                displayModal("Confirmation", "We received your request.");
+                displayModal("We received your request.");
             }
-            else {displayModal("Alert", "The email already exists in our system.");
+            else {displayModal("The email already exists in our system.");
             };   
         }
         else { 
@@ -35,7 +39,7 @@ formsList = JSON.parse(localStorage.getItem("formsList"));
                 formsList=[formObject];
             }
             else {
-                displayModal("Alert", "Please fill the email address!");
+                displayModal("Please fill the email address!");
             };
         };
 localStorage.setItem("formsList", JSON.stringify(formsList));
@@ -103,3 +107,11 @@ submitButtonEl.addEventListener("click", submitForm);
 
 // click the contact button
 contactButtonEl.addEventListener("click", contactUs);
+
+// When the user clicks on <span> (x), close the modal
+modalHolderEl.onclick = function() {
+    var modalEl= document.getElementById("modalId");
+    if (modalEl) {
+      clearModal();
+    };
+  };

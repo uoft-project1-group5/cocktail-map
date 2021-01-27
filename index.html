@@ -14,36 +14,13 @@
 <body>
     <!--header/navigation bar-->
     <header>
-        <div class="top-bar">
-            <a href="./index.html" class="link"><img class="logo" src="./Assets/images/logo.png"></a>
-            <nav class="top-bar-right">
-                <ul class="menu">
-                    <li>
-                        <a href="#about-us">About us</a>
-                    </li>
-                    <li>
-                        <a href="#Sign-up">Sign up</a>
-                    </li>
-                    <li>
-                        <a href="#subscription">Subscription</a>
-                    </li>
-                    <li>
-                        <a href="#contact-us">Contact us</a>
-                    </li>
-                    <li>
-                        <a href="./student-portal.html">Student Portal</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
     </header>
 
-
     <!--hero/jumbotron-->
-    <section class="hero grid-x" id="Sign-up">
+    <section class="hero grid-x" id="sign-up">
         <div class="cell">
             <div class="grid-x hero-section">
-                
+
                 <div class="cell hero-form">
                     <h3>Sign up here</h3>
                     <p>Fill this out and one of our Barkeep registrars will schedule a consult</p>
@@ -56,13 +33,13 @@
 
                             <div class="cell">
                                 <label for="email">Enter email address:</label>
-                                <input type="text" placeholder="Email Address" name="email" id="email"
+                                <input type="email" placeholder="Email Address" name="email" id="email"
                                     class="form-input">
                             </div>
 
                             <div class="cell">
                                 <label for="phone">Enter a telephone number:</label>
-                                <input type="text" placeholder="Phone Number" name="phone" id="phone"
+                                <input type="tel" placeholder="Phone Number" name="phone" id="phone"
                                     class="form-input">
                             </div>
 
@@ -92,7 +69,7 @@
                                     Submit!
                                 </button>
                             </div>
-                            <div class ="cell" id="modal-holder"></div>  <!-- modal holder -->
+                            <div class="cell" id="modal-holder"></div> <!-- modal holder -->
                         </div>
                     </form>
                 </div>
@@ -172,14 +149,14 @@
             <div class="cell small-3" id="contact-form">
                 <h3>Contact Us</h3>
                 <form>
-                  <label for="contact-name">Your Name</label>
-                  <input type="text" id="contact-name" placeholder="Your Name" />
-                  <label for="contact-phone">Phone Number</label>
-                  <input type="text" id="contact-phone" placeholder="Your Phone" />
-                  <label for="contact-message">Message</label>
-                  <textarea id="contact-message" placeholder="Message"></textarea>
-            
-                  <button class="button large" type="submit" id="contact-us-button">Submit</button>
+                    <label for="contact-name">Your Name</label>
+                    <input type="text" id="contact-name" placeholder="Your Name" />
+                    <label for="contact-phone">Phone Number</label>
+                    <input type="tel" id="contact-phone" placeholder="Your Phone" />
+                    <label for="contact-message">Message</label>
+                    <textarea id="contact-message" placeholder="Message"></textarea>
+
+                    <button class="button large" type="submit" id="contact-us-button">Submit</button>
                 </form>
             </div>
 
@@ -195,14 +172,11 @@
 
     <!--footer-->
     <footer class="grid-x grid-padding-x">
-        <h3 class="cell small-7">Mix and Drink Responsibly❤️</h3>
-        <div class="cell small-5">
-            &copy; 2021 Online Barkeep, Inc.
-        </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./Assets/js/load.js"></script>
     <script src="./Assets/js/scripts1.js"></script>
 </body>
 
