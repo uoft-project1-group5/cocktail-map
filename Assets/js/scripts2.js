@@ -95,9 +95,10 @@ var getIngredientDetails = async function (ingredient) {
         // request was successful
         if (await response.ok) {
           await response.json().then(async function(data) {
-              if (await data.parsed[0]) {
-                var ingDetails= await data.parsed[0].food.nutrients ;
-                ingDetailsStr = "CHOCDF: "+ingDetails.CHOCDF+" ENERC_KCAL: "+ingDetails.ENERC_KCAL+" FAT: "+ingDetails.FAT+" FIBTG: "+ingDetails.FIBTG+" PROCNT: "+ingDetails.PROCNT;
+              if (await data.hints[0]) {
+                var ingDetails= await data.hints[0].food.nutrients ;
+                ingDetailsStr = "CHOCDF: "+ingDetails.CHOCDF.toFixed(2)+ "; " +" ENERC_KCAL: "+ingDetails.ENERC_KCAL.toFixed(2)+ "; "
+                 +" FAT: "+ingDetails.FAT.toFixed(2) + "; "+" FIBTG: "+ingDetails.FIBTG.toFixed(2) + "; "+" PROCNT: "+ingDetails.PROCNT.toFixed(2) + ";";
               };
           });
         } else {
