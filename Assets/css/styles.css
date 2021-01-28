@@ -5,15 +5,14 @@
     --hover:  rgba(71, 96, 243, 0.86);
     --input: #022520ab;
     --border: rgba(78, 13, 9, 0.8);
-    --lobster: 'Lobster', cursive;
-    --courgette: 'Courgette', cursive;
+    --noto: 'Noto Serif', serif;
 }
 
 /* body for both page and footer style */
 body {
     display: flex;
     flex-direction: column;
-    font-family: var(--lobster);
+    font-family: var(--noto);
     font-size: 26px;
     line-height: 1.8;
     color: var(--primary);
@@ -42,7 +41,7 @@ footer {
 }
 
 h1, h2, h3 {
-    font-family: var(--lobster);
+    font-family: var(--noto);
 }
 
 /* logo style for both page */
@@ -109,12 +108,12 @@ h1, h2, h3 {
 
 .hero-form input {
     color: var(--input);
-    font-family: var(--courgette);
+    font-family: var(--noto);
 }
 
 label {
     font-size: 19px;
-    font-family: var(--courgette);
+    font-family: var(--noto);
     color: var(--primary);
 }
 
@@ -157,7 +156,7 @@ section {
 /* subscription style */ 
 .subscription {
     font-size: 26px;
-    font-family: var(--courgette);
+    font-family: var(--noto);
     color: var(--primary);
 }
 
@@ -172,7 +171,7 @@ section {
     padding: 7px 15px;
     font-size: 17px;
     color: var(--input);
-    font-family: var(--courgette);
+    font-family: var(--noto);
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px;
@@ -186,7 +185,7 @@ section {
     font-size: 19px;
     font-style: normal;
     color: var(--primary);
-    font-family: var(--courgette);
+    font-family: var(--noto);
 }
 
 #google-map {
