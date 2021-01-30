@@ -19,14 +19,14 @@
 
 ## Resources
 The lists of resources used to complete this project:
-3. Google (https://www.google.ca/) and Google Fonts (https://fonts.googleapis.com/css?family=Open+Sans&display=swap).
-4. MDN Web Docs (https://developer.mozilla.org/en-US/docs/Web/JavaScript).
-5. w3schools (https://www.w3schools.com/).
-6. Font Awesome (https://fontawesomeicons.com/).
-7. Foundation (https://get.foundation/).
-8. Food Database API (https://developer.edamam.com/food-database-api-docs).
-9. TheCocktailDB API (https://www.thecocktaildb.com/api.php).
-10. Supports from instructor, assistant instructor and Tutor. 
+1. Google (https://www.google.ca/) and Google Fonts (https://fonts.googleapis.com/css?family=Open+Sans&display=swap).
+2. MDN Web Docs (https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+3. w3schools (https://www.w3schools.com/).
+4. Font Awesome (https://fontawesomeicons.com/).
+5. Foundation (https://get.foundation/).
+6. Food Database API (https://developer.edamam.com/food-database-api-docs).
+7. TheCocktailDB API (https://www.thecocktaildb.com/api.php).
+8. Supports from instructor, assistant instructor and Tutor. 
 
 ## Contribution
 Made with ❤️ by Group5
