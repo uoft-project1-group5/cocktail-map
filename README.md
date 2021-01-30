@@ -34,8 +34,6 @@ Built with
 Website link: 
 https://uoft-project1-group5.github.io/cocktail-map/index.html
 
-<img src="./assets/images/website.JPG" alt="cocktail map" />
-
 Preview
 [Launch Cocktail Map](https://uoft-project1-group5.github.io/cocktail-map/index.html)
 
