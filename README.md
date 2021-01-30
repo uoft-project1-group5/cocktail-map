@@ -2,7 +2,7 @@
 
 ## Description
 Week 8 - Interactive Front-End Project 
-Online Barkeep by Group 5 
+Online Barkeep by Group 5
 
 Online Barkeep is a subscription-based website that will allow learners access to ingredients and recipes to foster a learning environment to prepare students for the work-field. At Online Barkeep, we bring a positive learning experience coupled with our massive database of drinks to create the perfect learning experiences. We are dedicated to creating world class bartenders who will succeed and thrive in every environment. Join today, and get unlimited access to all the ingredients and learn how to signature the perfect cocktails.
 
