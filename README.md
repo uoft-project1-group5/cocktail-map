@@ -1,1 +1,42 @@
-# cocktail-map
+# Cocktail Map
+
+## Description
+ Online Barkeep is a subscription-based website that will allow learners access to ingredients and recipes to foster a learning environment to prepare students for the work-field. At Online Barkeep, we bring a positive learning experience coupled with our massive database of drinks to create the perfect learning experiences. We are dedicated to creating world class bartenders who will succeed and thrive in every environment. Join today, and get unlimited access to all the ingredients and learn how to signature the perfect cocktails.
+
+## Built With
+* HTML
+* CSS
+* JavaScript
+* jQuery
+* [Foundation](https://get.foundation/)
+* [TheCocktailDB API](https://www.thecocktaildb.com/api.php)
+* [Food Database API](https://developer.edamam.com/food-database-api-docs)
+
+## Preview
+[Launch Cocktail Map](https://uoft-project1-group5.github.io/cocktail-map/index.html)
+
+![demo](./Assets/images/demo.gif)
+
+## Resources
+The lists of resources used to complete this project:
+3. Google (https://www.google.ca/) and Google Fonts (https://fonts.googleapis.com/css?family=Open+Sans&display=swap).
+4. MDN Web Docs (https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+5. w3schools (https://www.w3schools.com/).
+6. Font Awesome (https://fontawesomeicons.com/).
+7. Foundation (https://get.foundation/).
+8. Food Database API (https://developer.edamam.com/food-database-api-docs).
+9. TheCocktailDB API (https://www.thecocktaildb.com/api.php).
+10. Supports from instructor, assistant instructor and Tutor. 
+
+## Contribution
+Made with ❤️ by Group5
+* Johnny Wu
+* Malek Ben Jemia
+* Ojashri Basnyat
+* Rohan Negi
+* Shanshan Xu
+* Terrence Chan
+## License
+MIT
+
+#### ©️2021 Group5
