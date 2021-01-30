@@ -2,7 +2,7 @@
     --primary: #b4e4db;
     --secondary: #86bff1ab;
     --gradient: linear-gradient(6deg, #4e0d09 10%, #1c0505 57%, #791a12 84%);
-    --hover:  rgba(71, 96, 243, 0.86);
+    --hover:  rgb(161, 74, 39);
     --input: #022520ab;
     --border: rgba(78, 13, 9, 0.8);
     --noto: 'Noto Serif', serif;
