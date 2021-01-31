@@ -1,4 +1,4 @@
-# Cocktail Map
+# Online Barkeep
 
 ## Description
 Week 8 - Interactive Front-End Project 
